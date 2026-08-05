@@ -1,0 +1,8 @@
+pandas
+numpy
+scikit-learn
+pyyaml
+joblib
+dvc
+notebook
+ipykernel
