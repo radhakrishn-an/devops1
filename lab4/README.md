@@ -4,49 +4,99 @@
 
 ```bash
 docker build -t radhakrish55/boston-housing-api:latest .
-2. Run the Docker Container
+```
+
+---
+
+## 2. Run the Docker Container
+
+```bash
 docker run -p 8000:8000 radhakrish55/boston-housing-api:latest
+```
 
 The API will now be available at
 
+```text
 http://localhost:8000
-3. Push the Image to Docker Hub
+```
+
+---
+
+## 3. Push the Image to Docker Hub
 
 Login to Docker Hub
 
+```bash
 docker login
+```
 
 Push the image
 
+```bash
 docker push radhakrish55/boston-housing-api:latest
-4. Pull the Image
+```
+
+---
+
+## 4. Pull the Image
 
 Anyone can pull the image using
 
+```bash
 docker pull radhakrish55/boston-housing-api:latest
-5. Run the Pulled Image
+```
+
+---
+
+## 5. Run the Pulled Image
+
+```bash
 docker run -p 8000:8000 radhakrish55/boston-housing-api:latest
-API Endpoints
-Home
+```
 
-GET
+---
 
+# API Endpoints
+
+## Home
+
+**GET**
+
+```text
 /
-Health Check
+```
 
-GET
+---
 
+## Health Check
+
+**GET**
+
+```text
 /health
-Response
+```
+
+### Response
+
+```json
 {
     "status": "ok"
 }
-Prediction
+```
 
-POST
+---
 
+## Prediction
+
+**POST**
+
+```text
 /predict
-Request
+```
+
+### Request
+
+```json
 {
     "features": [
         0.00632,
@@ -64,12 +114,22 @@ Request
         4.98
     ]
 }
-Example Response
+```
+
+### Example Response
+
+```json
 {
     "predicted_price": 24.53
 }
-Docker Hub Repository
+```
+
+---
+
+# Docker Hub Repository
+
+```text
 https://hub.docker.com/r/radhakrish55/boston-housing-api
+```
 
-
-
+---
