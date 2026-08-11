@@ -31,7 +31,7 @@ jobs:
       - name: Run tests
         working-directory: project
         run: |
-          pytest
+          PYTHONPATH=. pytest
 
       - name: Build Docker image
         working-directory: project
